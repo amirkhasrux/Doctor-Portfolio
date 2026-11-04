@@ -53,10 +53,13 @@ body {
 
 /* Subtle ECG pulse animation */
 @keyframes ecgPulse {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: scale(1);
     opacity: 0.9;
   }
+
   50% {
     transform: scale(1.04);
     opacity: 1;
