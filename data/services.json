@@ -1,0 +1,81 @@
+[
+  {
+    "id": "hypertension",
+    "title": "Hypertension & Vascular Care",
+    "bengaliTitle": "উচ্চ রক্তচাপ ও ভাস্কুলার চিকিৎসা",
+    "shortDescription": "Comprehensive blood pressure regulation, 24-hr ambulatory monitoring, and target organ protection against stroke and kidney disease.",
+    "icon": "Activity",
+    "procedures": [
+      "24-Hour Ambulatory Blood Pressure Monitoring (ABPM)",
+      "Refractory & Secondary Hypertension Workup",
+      "Vascular Risk Factor Assessment & Lifestyle Guidance"
+    ],
+    "highlight": "Personalized Medication & Diet Regimen"
+  },
+  {
+    "id": "cad-heart-attack",
+    "title": "Coronary Artery Disease & Heart Attack",
+    "bengaliTitle": "করোনারি ধমনী রোগ ও হার্ট অ্যাটাক প্রতিরোধ",
+    "shortDescription": "Early detection of arterial blockages, acute chest pain evaluation, and long-term secondary prevention after myocardial infarction.",
+    "icon": "HeartPulse",
+    "procedures": [
+      "Chest Pain / Angina Pectoris Evaluation",
+      "Lipid & Cholesterol Optimization Therapy",
+      "Post-Myocardial Infarction Long-term Rehabilitation"
+    ],
+    "highlight": "Emergency Protocol & Risk Stratification"
+  },
+  {
+    "id": "interventional-cardiology",
+    "title": "Angiogram & Stenting (PCI) Guidance",
+    "bengaliTitle": "এনজিওগ্রাম ও রিং পরানো (অ্যাঞ্জিওপ্লাস্টি) পরামর্শ",
+    "shortDescription": "Expert pre-procedure evaluation and second opinions for Coronary Angiogram (CAG), Drug-Eluting Stents (PTCA/Stenting), and bypass surgery referral.",
+    "icon": "Stethoscope",
+    "procedures": [
+      "Radial & Femoral Coronary Angiogram Assessment",
+      "Complex Bifurcation & Left Main PCI Planning",
+      "Second Opinion on CABG (Bypass Surgery) vs. Stenting"
+    ],
+    "highlight": "Trans-radial Approach Guidance"
+  },
+  {
+    "id": "heart-failure-arrhythmia",
+    "title": "Heart Failure & Arrhythmia Management",
+    "bengaliTitle": "হার্ট ফেইলিওর ও বুক ধড়ফড় (অ্যারিদমিয়া)",
+    "shortDescription": "Advanced therapy for cardiomyopathy, fluid retention, irregular heart rhythms, palpitations, and sudden cardiac arrest prevention.",
+    "icon": "Zap",
+    "procedures": [
+      "Guideline-Directed Medical Therapy (GDMT)",
+      "Holter 24/48-Hour Rhythm Monitoring",
+      "Evaluation for ICD & Cardiac Resynchronization Therapy (CRT)"
+    ],
+    "highlight": "Comprehensive Fluid & Rhythm Control"
+  },
+  {
+    "id": "pacemaker-consultation",
+    "title": "Pacemaker & Device Consultation",
+    "bengaliTitle": "পেসমেকার স্থাপন ও ফলো-আপ",
+    "shortDescription": "Clinical assessment for Bradycardia (slow heart rate), Sick Sinus Syndrome, Heart Block, and regular post-implant pacemaker interrogation.",
+    "icon": "Cpu",
+    "procedures": [
+      "Single & Dual Chamber Pacemaker (PPM) Assessment",
+      "Post-Implant Device Check & Battery Life Monitoring",
+      "Syncope (Fainting) & Conduction Defect Workup"
+    ],
+    "highlight": "Regular Programming & Device Care"
+  },
+  {
+    "id": "cardiac-diagnostics",
+    "title": "Non-Invasive Diagnostics (Echo, ECG, ETT)",
+    "bengaliTitle": "ইকোকার্ডিওগ্রাফি, ইসিজি ও ইটিটি পরীক্ষা",
+    "shortDescription": "High-resolution 2D and Color Doppler Echocardiography, Exercise Tolerance Testing (ETT/TMT), and resting 12-lead ECG interpretation.",
+    "icon": "FileText",
+    "procedures": [
+      "2D & Color Doppler Echocardiography",
+      "Treadmill Exercise Tolerance Test (ETT / TMT)",
+      "Resting 12-Lead Electrocardiography (ECG)"
+    ],
+    "highlight": "Direct Physician-Conducted Echo Tests"
+  }
+]
+

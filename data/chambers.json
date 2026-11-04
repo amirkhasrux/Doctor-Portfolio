@@ -1,0 +1,69 @@
+[
+  {
+    "id": "nhf-mirpur",
+    "facility": "National Heart Foundation",
+    "facilityFull": "National Heart Foundation Hospital & Research Institute",
+    "branch": "Mirpur-2, Dhaka",
+    "address": "Plot-4, Section-2, Mirpur, Dhaka-1216",
+    "room": "Room 304, 3rd Floor, Outpatient Cardiology Wing",
+    "days": "Saturday - Wednesday",
+    "time": "4:00 PM - 8:00 PM",
+    "serialPhones": [
+      "+8801711000000",
+      "+8801811000000"
+    ],
+    "serialBookingNote": "Serial phone lines open from 9:00 AM to 1:00 PM daily",
+    "consultationFee": {
+      "newPatient": "৳1,500",
+      "followUp": "৳1,000",
+      "reportShowing": "Free (within 14 days)"
+    },
+    "googleMapsUrl": "https://maps.google.com/?q=National+Heart+Foundation+Dhaka",
+    "isPrimary": true
+  },
+  {
+    "id": "labaid-dhanmondi",
+    "facility": "Labaid Cardiac Hospital",
+    "facilityFull": "Labaid Cardiac Hospital & Specialized Heart Center",
+    "branch": "House 01, Road 04, Dhanmondi, Dhaka",
+    "address": "House 01, Road 04, Dhanmondi, Dhaka-1205",
+    "room": "Chamber 210, 2nd Floor, Senior Consultant Suite",
+    "days": "Sunday - Thursday",
+    "time": "6:00 PM - 9:30 PM",
+    "serialPhones": [
+      "+8801722000000",
+      "+8801911000000"
+    ],
+    "serialBookingNote": "Call serial assistants between 10:00 AM and 3:00 PM",
+    "consultationFee": {
+      "newPatient": "৳2,000",
+      "followUp": "৳1,200",
+      "reportShowing": "Free (within 10 days)"
+    },
+    "googleMapsUrl": "https://maps.google.com/?q=Labaid+Cardiac+Hospital+Dhanmondi",
+    "isPrimary": false
+  },
+  {
+    "id": "popular-shantinagar",
+    "facility": "Popular Diagnostic Centre",
+    "facilityFull": "Popular Diagnostic Centre (Unit 01 Cardiology Wing)",
+    "branch": "Shantinagar, Dhaka",
+    "address": "Unit 01, House 11, Shantinagar Road, Motijheel, Dhaka-1217",
+    "room": "Chamber 415, 4th Floor",
+    "days": "Every Friday (Weekend Clinic)",
+    "time": "9:00 AM - 1:00 PM & 5:00 PM - 8:30 PM",
+    "serialPhones": [
+      "+8801977000000",
+      "+8801552000000"
+    ],
+    "serialBookingNote": "Advance booking opens every Thursday 8:00 AM",
+    "consultationFee": {
+      "newPatient": "৳1,500",
+      "followUp": "৳1,000",
+      "reportShowing": "Free (within 14 days)"
+    },
+    "googleMapsUrl": "https://maps.google.com/?q=Popular+Diagnostic+Centre+Shantinagar",
+    "isPrimary": false
+  }
+]
+
