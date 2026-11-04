@@ -1,36 +1,120 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+🩺 Cardiologist Digital Chamber Website
 
-## Getting Started
+A high-performance, mobile-first doctor portfolio and appointment referral website built for a senior Bangladeshi Interventional Cardiologist. Designed with modern clinical aesthetics, editorial typography, and streamlined for local patient habits (direct telephone serial booking & WhatsApp).
 
-First, run the development server:
+🌟 Key Features
 
-```bash
+Editorial Clinical Design: Striking high-contrast hero section with medical typography inspired by modern web benchmarks.
+
+Multi-Chamber Roster: Structured Chamber cards for hospitals and diagnostic centers across Bangladesh detailing visiting days, room numbers, and timings.
+
+Local Conversion Focus:
+
+One-tap tel: links to call chamber assistants directly for serial booking.
+
+Floating WhatsApp action button preconfigured with an appointment inquiry template.
+
+Direct Google Maps directions for each practice location.
+
+BMDC Credibility & Trust: Prominently highlights BMDC registration number, qualifications (MBBS, MD (Cardiology)), and institutional affiliations.
+
+Zero-Latency Static Data: Chamber schedules and specialty service offerings are decoupled into clean JSON structures (/data/chambers.json & /data/services.json).
+
+SEO & Social Optimization: Pre-configured OpenGraph metadata and medical physician schema markup (JSON-LD) for Bangladeshi search discovery.
+
+🛠️ Tech Stack
+
+Framework: Next.js (App Router, Static Site Generation)
+
+Styling: Tailwind CSS
+
+Icons: Lucide React
+
+Typography: Montserrat & Inter via next/font/google
+
+Deployment Ready: Vercel, Netlify, or Cloudflare Pages
+
+📁 Project Structure
+
+├── app/
+│   ├── favicon.ico
+│   ├── globals.css          # Tailwind layer definitions & color tokens
+│   ├── layout.jsx           # Root layout, fonts & local SEO schema
+│   └── page.jsx             # Main landing page composition
+├── components/
+│   ├── Navbar.jsx           # Frosted navigation header & quick serial dial
+│   ├── HeroSection.jsx      # High-impact typography, badges & CTAs
+│   ├── ChamberSection.jsx   # Multi-location chamber cards grid
+│   ├── ChamberCard.jsx      # Reusable card with call & map triggers
+│   ├── ServicesGrid.jsx     # Clinical focus areas & diagnostic services
+│   ├── FaqSection.jsx       # Consultation policies & serial guidelines
+│   ├── Footer.jsx           # Legal disclaimers & emergency notices
+│   └── FloatingWhatsApp.jsx # Sticky bottom-right WhatsApp quick dial
+├── data/
+│   ├── chambers.json        # Hospital locations, phone numbers & visiting hours
+│   └── services.json        # Cardiology conditions & treatments offered
+├── public/
+│   └── images/              # Doctor portrait & graphic assets
+├── prd.md                   # Product Requirements Document
+├── architecture.md          # Technical specifications
+└── design.md                # Design system & visual guidelines
+
+
+🚀 Getting Started
+
+Prerequisites
+
+Node.js 18.17.0 or higher
+
+npm, pnpm, or yarn
+
+1. Installation
+
+Clone the repository and install dependencies:
+
+git clone https://github.com/your-username/doctor-chamber-web.git
+cd doctor-chamber-web
+npm install
+
+
+2. Run the Development Server
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Open http://localhost:3000 in your browser to inspect the application.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. Build for Production
 
-## Learn More
+npm run build
+npm run start
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+⚙️ Customization
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Modifying Chamber Locations & Phone Numbers
 
-## Deploy on Vercel
+All chamber locations, assistant phone numbers, and visiting hours are managed inside data/chambers.json. Update the array to reflect real-world clinic details:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+{
+  "id": "nhf-mirpur",
+  "facility": "National Heart Foundation",
+  "branch": "Mirpur, Dhaka",
+  "room": "Room 304, 3rd Floor",
+  "days": "Saturday - Wednesday",
+  "time": "4:00 PM - 8:00 PM",
+  "serialPhones": ["+8801711000000"],
+  "googleMapsUrl": "https://maps.google.com/?q=National+Heart+Foundation+Dhaka"
+}
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+Updating WhatsApp Serial Number
+
+Open components/FloatingWhatsApp.jsx and replace the placeholder phone number with the doctor's assistant's WhatsApp number in international format (without the +):
+
+const WHATSAPP_NUMBER = "88017XXXXXXXX";
+
+
+📄 License
+
+This project is open-source and available under the MIT License.
