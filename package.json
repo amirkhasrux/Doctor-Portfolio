@@ -16,8 +16,10 @@
   },
   "devDependencies": {
     "@tailwindcss/turbopack": "^4",
+    "autoprefixer": "^10.6.2",
     "eslint": "^9",
     "eslint-config-next": "16.4.5",
+    "postcss": "^8.5.32",
     "tailwindcss": "^4"
   }
 }
