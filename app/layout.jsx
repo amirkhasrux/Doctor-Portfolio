@@ -2,7 +2,7 @@ import "./globals.css";
 
 export const metadata = {
   title: "Dr. Masudur Rahman | Senior Cardiologist & Heart Specialist Dhaka",
-  description: "Official digital chamber portal for Dr. Masudur Rahman, MBBS, MD (Cardiology) - Professor of Cardiology at NICVD. Find chamber schedules at National Heart Foundation, Labaid Cardiac Hospital, and book serial appointments.",
+  description: "Official digital chamber portal for Dr. Masudur Rahman, MBBS, FCPS, MD (Cardiology) - Professor of Cardiology at NICVD. Find chamber schedules at National Heart Foundation, Labaid Cardiac Hospital, and book serial appointments in 60 seconds.",
   keywords: [
     "Dr. Masudur Rahman",
     "Cardiologist in Dhaka",
@@ -69,7 +69,7 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-full flex flex-col bg-cardio-navy text-white antialiased">
+      <body className="min-h-full flex flex-col bg-white text-slate-900 antialiased selection:bg-red-600 selection:text-white">
         {children}
       </body>
     </html>

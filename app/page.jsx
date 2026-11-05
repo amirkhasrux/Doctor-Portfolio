@@ -1,33 +1,41 @@
 import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
 import ExperienceBar from '@/components/ExperienceBar';
-import ServicesGrid from '@/components/ServicesGrid';
 import ChamberSection from '@/components/ChamberSection';
+import ServicesGrid from '@/components/ServicesGrid';
 import FaqSection from '@/components/FaqSection';
 import Footer from '@/components/Footer';
 import FloatingWhatsApp from '@/components/FloatingWhatsApp';
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col bg-cardio-navy text-white selection:bg-cardio-red selection:text-white">
-      {/* Top Navigation */}
+    <div className="min-h-screen flex flex-col bg-white text-slate-900 selection:bg-red-600 selection:text-white">
+      {/* 1. Distraction-Free Sticky Navigation */}
       <Navbar />
 
-      {/* Main Content Sections */}
+      {/* Main Single-Column VSL Funnel Flow */}
       <main className="flex-1">
+        {/* 2. Centered VSL Hero + 16:9 Video Box & Affiliation Strip */}
         <HeroSection />
+
+        {/* 3. 4-Metric Authority Counter Bar */}
         <ExperienceBar />
-        <ServicesGrid />
+
+        {/* 4. Interactive Call & WhatsApp Serial Booking Widget */}
         <ChamberSection />
+
+        {/* 5. Cardiovascular Specialty & Outcomes Grid */}
+        <ServicesGrid />
+
+        {/* 6. Single-Column Centered FAQ Accordion */}
         <FaqSection />
       </main>
 
-      {/* Footer */}
+      {/* 7. Comprehensive Clinical Footer & Emergency Hotlines */}
       <Footer />
 
-      {/* Sticky Quick-Action Booking */}
+      {/* 8. Sticky Bottom-Right WhatsApp Trigger */}
       <FloatingWhatsApp />
     </div>
   );
 }
-

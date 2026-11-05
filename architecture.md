@@ -1,85 +1,42 @@
 # System Architecture Document
 
-**Project:** Doctor's Digital Chamber Website (Cardiology)  
+**Project:** Doctor's Digital Chamber Website (VSL Outcome Funnel Edition)  
 **Framework:** Next.js (App Router) with Tailwind CSS  
-**Hosting Target:** Vercel / Cloudflare Pages / Node.js VPS
+**Hosting Target:** Vercel
 
 ---
 
 ## 1. Technical Stack Selection
-* **Core Framework:** Next.js (App Router, Static Site Generation / Server Components by default).
-* **Styling Engine:** Tailwind CSS with custom color extensions (`cardio-navy`, `cardio-red`, `vitality-amber`).
-* **Icons:** `lucide-react` for clean, lightweight medical and interface iconography.
-* **Fonts:** `next/font/google` importing *Montserrat* / *Syne* (for editorial headings) and *Inter* (for clean clinical readability).
-* **Data Layer:** Flat static JSON (`/data/chambers.json`, `/data/services.json`) for zero-latency, zero-database overhead.
+* **Core Framework:** Next.js (App Router, Server Components with `"use client"` interactive islands for the Video Player, Chamber Booking Tabs, and FAQ Accordion).
+* **Styling Engine:** Tailwind CSS.
+* **Icons:** `lucide-react`.
+* **Fonts:** `next/font/google` (*Montserrat* and *Inter*).
+* **Data Layer:** Static JSON (`/data/chambers.json`, `/data/services.json`) or co-located structured constants for zero-latency rendering.
 
 ---
 
-## 2. Directory Structure
+## 2. Directory & Component Structure
 
 ```text
 doctor-portfolio/
 ├── app/
 │   ├── favicon.ico
-│   ├── globals.css          # Custom typography & utility layers
-│   ├── layout.jsx           # Root layout with SEO metadata & schema markup
-│   └── page.jsx             # Single-page assemble composed of modular sections
+│   ├── globals.css          # Tailwind imports & custom scroll-behavior: smooth
+│   ├── layout.jsx           # Root layout with JSON-LD MedicalBusiness schema
+│   └── page.jsx             # Vertical single-page VSL funnel assembly
 ├── components/
-│   ├── Navbar.jsx           # Top branding with BMDC and serial quick-dial
-│   ├── HeroSection.jsx      # High-impact typography, 3D anatomical motif & doctor portrait
-│   ├── ExperienceBar.jsx    # Quick stat counters (Years, Patients, Operations)
-│   ├── ChamberSection.jsx   # Grid of multi-location chamber cards
-│   ├── ChamberCard.jsx      # Reusable chamber card with direct-dial and maps
-│   ├── ServicesGrid.jsx     # Cardiovascular specialties & diagnostic tests
-│   ├── FaqSection.jsx       # Consultation policies & serial guidelines
-│   ├── Footer.jsx           # Legal, BMDC disclaimer, emergency contact
-│   └── FloatingWhatsApp.jsx # Sticky bottom-right WhatsApp quick action
+│   ├── Navbar.jsx           # Minimal header with BMDC badge & Book Serial CTA
+│   ├── HeroSection.jsx      # Centered outcome title, CTA, 16:9 VSL video player & hospital strip
+│   ├── ExperienceBar.jsx    # 4-metric authority counter bar
+│   ├── ChamberSection.jsx   # Interactive tabbed Call & WhatsApp Serial Booking widget (#book-serial)
+│   ├── ServicesGrid.jsx     # 6-card cardiovascular specialty & outcome grid (#services)
+│   ├── FaqSection.jsx       # Centered single-column accordion (#faqs)
+│   ├── Footer.jsx           # Emergency advisory (NICVD / 999) & BMDC copyright
+│   └── FloatingWhatsApp.jsx # Sticky bottom-right WhatsApp trigger
 ├── data/
-│   ├── chambers.json        # Hospital locations, serial numbers, visiting times
-│   └── services.json        # List of cardiology procedures & conditions treated
-├── public/
-│   └── images/              # Doctor portrait, heart illustration asset, clinic badges
+│   ├── chambers.json        # Chamber branches, visiting hours, fees, phone numbers
+│   └── services.json        # Cardiology services with Bengali subtitles
 ├── prd.md
 ├── architecture.md
 ├── design.md
 └── package.json
-```
-
----
-
-## 3. Data Schema Definitions
-
-### 3.1. `chambers.json`
-```json
-[
-  {
-    "id": "nhf-mirpur",
-    "facility": "National Heart Foundation",
-    "branch": "Mirpur, Dhaka",
-    "room": "Room 304, 3rd Floor",
-    "days": "Saturday - Wednesday",
-    "time": "4:00 PM - 8:00 PM",
-    "serialPhones": ["+8801711000000", "+8801811000000"],
-    "googleMapsUrl": "https://maps.google.com/?q=National+Heart+Foundation+Dhaka"
-  },
-  {
-    "id": "labaid-dhanmondi",
-    "facility": "Labaid Cardiac Hospital",
-    "branch": "House 01, Road 04, Dhanmondi, Dhaka",
-    "room": "Chamber 210, 2nd Floor",
-    "days": "Sunday - Thursday",
-    "time": "6:00 PM - 9:30 PM",
-    "serialPhones": ["+8801722000000"],
-    "googleMapsUrl": "https://maps.google.com/?q=Labaid+Cardiac+Hospital+Dhanmondi"
-  }
-]
-```
-
----
-
-## 4. SEO & Medical Metadata Strategy
-* Implement JSON-LD `MedicalBusiness` / `Physician` schema in `app/layout.jsx`:
-  * `medicalSpecialty`: `CardiovascularDisease`
-  * `alumni`: `National Institute of Cardiovascular Diseases (NICVD)`
-  * `addressCountry`: `BD`
-* OpenGraph tags preconfigured for WhatsApp link sharing (shows doctor headshot + chamber title on chat previews).
